@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D08EE22C26779C07000C9037 /* WhitlabelHostAppDebug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D08EE22B26779C07000C9037 /* WhitlabelHostAppDebug.xcconfig */; };
+		D08EE22E2677AB03000C9037 /* WhitlabelHostAppRelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D08EE22D2677AB03000C9037 /* WhitlabelHostAppRelease.xcconfig */; };
 		D0BD89322676525E00B82DC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BD89312676525E00B82DC6 /* AppDelegate.swift */; };
 		D0BD89342676525E00B82DC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BD89332676525E00B82DC6 /* SceneDelegate.swift */; };
 		D0BD89362676525E00B82DC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BD89352676525E00B82DC6 /* ViewController.swift */; };
@@ -35,7 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D0BD892E2676525E00B82DC6 /* Host.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Host.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D08EE22B26779C07000C9037 /* WhitlabelHostAppDebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = WhitlabelHostAppDebug.xcconfig; sourceTree = "<group>"; };
+		D08EE22D2677AB03000C9037 /* WhitlabelHostAppRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = WhitlabelHostAppRelease.xcconfig; sourceTree = "<group>"; };
+		D08EE22F2677ADF3000C9037 /* WhitlabelHostApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = WhitlabelHostApp.xctestplan; path = TestPlans/WhitlabelHostApp.xctestplan; sourceTree = "<group>"; };
+		D0BD892E2676525E00B82DC6 /* WhitlabelHostApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhitlabelHostApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0BD89312676525E00B82DC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0BD89332676525E00B82DC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D0BD89352676525E00B82DC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,10 +48,10 @@
 		D0BD893A2676525F00B82DC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0BD893D2676525F00B82DC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0BD893F2676525F00B82DC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0BD89442676525F00B82DC6 /* HostTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HostTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0BD89442676525F00B82DC6 /* WhitlabelHostAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitlabelHostAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0BD89482676525F00B82DC6 /* HostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostTests.swift; sourceTree = "<group>"; };
 		D0BD894A2676525F00B82DC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0BD894F2676525F00B82DC6 /* HostUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HostUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0BD894F2676525F00B82DC6 /* WhitlabelHostAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitlabelHostAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0BD89532676525F00B82DC6 /* HostUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostUITests.swift; sourceTree = "<group>"; };
 		D0BD89552676525F00B82DC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,12 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D08EE22A26779C07000C9037 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				D08EE22B26779C07000C9037 /* WhitlabelHostAppDebug.xcconfig */,
+				D08EE22D2677AB03000C9037 /* WhitlabelHostAppRelease.xcconfig */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
 		D0BD89252676525E00B82DC6 = {
 			isa = PBXGroup;
 			children = (
-				D0BD89302676525E00B82DC6 /* Host */,
-				D0BD89472676525F00B82DC6 /* HostTests */,
-				D0BD89522676525F00B82DC6 /* HostUITests */,
+				D08EE22F2677ADF3000C9037 /* WhitlabelHostApp.xctestplan */,
+				D08EE22A26779C07000C9037 /* Configs */,
+				D0BD89302676525E00B82DC6 /* WhitlabelHostApp */,
+				D0BD89472676525F00B82DC6 /* WhitlabelHostAppTests */,
+				D0BD89522676525F00B82DC6 /* WhitlabelHostAppUITests */,
 				D0BD892F2676525E00B82DC6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,14 +105,14 @@
 		D0BD892F2676525E00B82DC6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D0BD892E2676525E00B82DC6 /* Host.app */,
-				D0BD89442676525F00B82DC6 /* HostTests.xctest */,
-				D0BD894F2676525F00B82DC6 /* HostUITests.xctest */,
+				D0BD892E2676525E00B82DC6 /* WhitlabelHostApp.app */,
+				D0BD89442676525F00B82DC6 /* WhitlabelHostAppTests.xctest */,
+				D0BD894F2676525F00B82DC6 /* WhitlabelHostAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D0BD89302676525E00B82DC6 /* Host */ = {
+		D0BD89302676525E00B82DC6 /* WhitlabelHostApp */ = {
 			isa = PBXGroup;
 			children = (
 				D0BD89312676525E00B82DC6 /* AppDelegate.swift */,
@@ -107,33 +123,33 @@
 				D0BD893C2676525F00B82DC6 /* LaunchScreen.storyboard */,
 				D0BD893F2676525F00B82DC6 /* Info.plist */,
 			);
-			path = Host;
+			path = WhitlabelHostApp;
 			sourceTree = "<group>";
 		};
-		D0BD89472676525F00B82DC6 /* HostTests */ = {
+		D0BD89472676525F00B82DC6 /* WhitlabelHostAppTests */ = {
 			isa = PBXGroup;
 			children = (
 				D0BD89482676525F00B82DC6 /* HostTests.swift */,
 				D0BD894A2676525F00B82DC6 /* Info.plist */,
 			);
-			path = HostTests;
+			path = WhitlabelHostAppTests;
 			sourceTree = "<group>";
 		};
-		D0BD89522676525F00B82DC6 /* HostUITests */ = {
+		D0BD89522676525F00B82DC6 /* WhitlabelHostAppUITests */ = {
 			isa = PBXGroup;
 			children = (
 				D0BD89532676525F00B82DC6 /* HostUITests.swift */,
 				D0BD89552676525F00B82DC6 /* Info.plist */,
 			);
-			path = HostUITests;
+			path = WhitlabelHostAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D0BD892D2676525E00B82DC6 /* Host */ = {
+		D0BD892D2676525E00B82DC6 /* WhitlabelHostApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0BD89582676525F00B82DC6 /* Build configuration list for PBXNativeTarget "Host" */;
+			buildConfigurationList = D0BD89582676525F00B82DC6 /* Build configuration list for PBXNativeTarget "WhitlabelHostApp" */;
 			buildPhases = (
 				D0BD892A2676525E00B82DC6 /* Sources */,
 				D0BD892B2676525E00B82DC6 /* Frameworks */,
@@ -143,14 +159,14 @@
 			);
 			dependencies = (
 			);
-			name = Host;
+			name = WhitlabelHostApp;
 			productName = Host;
-			productReference = D0BD892E2676525E00B82DC6 /* Host.app */;
+			productReference = D0BD892E2676525E00B82DC6 /* WhitlabelHostApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D0BD89432676525F00B82DC6 /* HostTests */ = {
+		D0BD89432676525F00B82DC6 /* WhitlabelHostAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0BD895B2676525F00B82DC6 /* Build configuration list for PBXNativeTarget "HostTests" */;
+			buildConfigurationList = D0BD895B2676525F00B82DC6 /* Build configuration list for PBXNativeTarget "WhitlabelHostAppTests" */;
 			buildPhases = (
 				D0BD89402676525F00B82DC6 /* Sources */,
 				D0BD89412676525F00B82DC6 /* Frameworks */,
@@ -161,14 +177,14 @@
 			dependencies = (
 				D0BD89462676525F00B82DC6 /* PBXTargetDependency */,
 			);
-			name = HostTests;
+			name = WhitlabelHostAppTests;
 			productName = HostTests;
-			productReference = D0BD89442676525F00B82DC6 /* HostTests.xctest */;
+			productReference = D0BD89442676525F00B82DC6 /* WhitlabelHostAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D0BD894E2676525F00B82DC6 /* HostUITests */ = {
+		D0BD894E2676525F00B82DC6 /* WhitlabelHostAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0BD895E2676525F00B82DC6 /* Build configuration list for PBXNativeTarget "HostUITests" */;
+			buildConfigurationList = D0BD895E2676525F00B82DC6 /* Build configuration list for PBXNativeTarget "WhitlabelHostAppUITests" */;
 			buildPhases = (
 				D0BD894B2676525F00B82DC6 /* Sources */,
 				D0BD894C2676525F00B82DC6 /* Frameworks */,
@@ -179,9 +195,9 @@
 			dependencies = (
 				D0BD89512676525F00B82DC6 /* PBXTargetDependency */,
 			);
-			name = HostUITests;
+			name = WhitlabelHostAppUITests;
 			productName = HostUITests;
-			productReference = D0BD894F2676525F00B82DC6 /* HostUITests.xctest */;
+			productReference = D0BD894F2676525F00B82DC6 /* WhitlabelHostAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +222,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D0BD89292676525E00B82DC6 /* Build configuration list for PBXProject "Host" */;
+			buildConfigurationList = D0BD89292676525E00B82DC6 /* Build configuration list for PBXProject "WhitlabelHostApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,9 +235,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D0BD892D2676525E00B82DC6 /* Host */,
-				D0BD89432676525F00B82DC6 /* HostTests */,
-				D0BD894E2676525F00B82DC6 /* HostUITests */,
+				D0BD892D2676525E00B82DC6 /* WhitlabelHostApp */,
+				D0BD89432676525F00B82DC6 /* WhitlabelHostAppTests */,
+				D0BD894E2676525F00B82DC6 /* WhitlabelHostAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,6 +249,8 @@
 			files = (
 				D0BD893E2676525F00B82DC6 /* LaunchScreen.storyboard in Resources */,
 				D0BD893B2676525F00B82DC6 /* Assets.xcassets in Resources */,
+				D08EE22E2677AB03000C9037 /* WhitlabelHostAppRelease.xcconfig in Resources */,
+				D08EE22C26779C07000C9037 /* WhitlabelHostAppDebug.xcconfig in Resources */,
 				D0BD89392676525E00B82DC6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,12 +303,12 @@
 /* Begin PBXTargetDependency section */
 		D0BD89462676525F00B82DC6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D0BD892D2676525E00B82DC6 /* Host */;
+			target = D0BD892D2676525E00B82DC6 /* WhitlabelHostApp */;
 			targetProxy = D0BD89452676525F00B82DC6 /* PBXContainerItemProxy */;
 		};
 		D0BD89512676525F00B82DC6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D0BD892D2676525E00B82DC6 /* Host */;
+			target = D0BD892D2676525E00B82DC6 /* WhitlabelHostApp */;
 			targetProxy = D0BD89502676525F00B82DC6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -436,15 +454,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7H7XB8AK4C;
-				INFOPLIST_FILE = Host/Info.plist;
+				CODE_SIGN_IDENTITY = "Apple Distribution: Issam Bendaas (CQ43F9FCGE)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = CQ43F9FCGE;
+				INFOPLIST_FILE = WhitlabelHostApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = issambendaas.Host;
+				PRODUCT_BUNDLE_IDENTIFIER = com.issambendaas.WhitlabelHostApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "241f3cdf-30ca-4533-b761-78f24a5ce0c5";
+				PROVISIONING_PROFILE_SPECIFIER = CQ43F9FCGE.com.issambendaas.WhitlabelHostApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -455,15 +476,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7H7XB8AK4C;
-				INFOPLIST_FILE = Host/Info.plist;
+				CODE_SIGN_IDENTITY = "Apple Distribution: Issam Bendaas (CQ43F9FCGE)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = CQ43F9FCGE;
+				INFOPLIST_FILE = WhitlabelHostApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = issambendaas.Host;
+				PRODUCT_BUNDLE_IDENTIFIER = com.issambendaas.WhitlabelHostApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = CQ43F9FCGE.com.issambendaas.WhitlabelHostApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -474,9 +497,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7H7XB8AK4C;
-				INFOPLIST_FILE = HostTests/Info.plist;
+				CODE_SIGN_IDENTITY = "Apple Distribution: Issam Bendaas (CQ43F9FCGE)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = CQ43F9FCGE;
+				INFOPLIST_FILE = WhitlabelHostAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -485,9 +509,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = issambendaas.HostTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "241f3cdf-30ca-4533-b761-78f24a5ce0c5";
+				PROVISIONING_PROFILE_SPECIFIER = CQ43F9FCGE.com.issambendaas.WhitlabelHostApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Host.app/Host";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhitlabelHostApp.app/WhitlabelHostApp";
 			};
 			name = Debug;
 		};
@@ -496,9 +522,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7H7XB8AK4C;
-				INFOPLIST_FILE = HostTests/Info.plist;
+				CODE_SIGN_IDENTITY = "Apple Distribution: Issam Bendaas (CQ43F9FCGE)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = CQ43F9FCGE;
+				INFOPLIST_FILE = WhitlabelHostAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -507,9 +534,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = issambendaas.HostTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = CQ43F9FCGE.com.issambendaas.WhitlabelHostApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Host.app/Host";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhitlabelHostApp.app/WhitlabelHostApp";
 			};
 			name = Release;
 		};
@@ -517,9 +545,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7H7XB8AK4C;
-				INFOPLIST_FILE = HostUITests/Info.plist;
+				CODE_SIGN_IDENTITY = "Apple Distribution: Issam Bendaas (CQ43F9FCGE)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = CQ43F9FCGE;
+				INFOPLIST_FILE = WhitlabelHostAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -527,6 +556,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = issambendaas.HostUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "241f3cdf-30ca-4533-b761-78f24a5ce0c5";
+				PROVISIONING_PROFILE_SPECIFIER = CQ43F9FCGE.com.issambendaas.WhitlabelHostApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Host;
@@ -537,9 +568,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7H7XB8AK4C;
-				INFOPLIST_FILE = HostUITests/Info.plist;
+				CODE_SIGN_IDENTITY = "Apple Distribution: Issam Bendaas (CQ43F9FCGE)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = CQ43F9FCGE;
+				INFOPLIST_FILE = WhitlabelHostAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -547,6 +579,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = issambendaas.HostUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = CQ43F9FCGE.com.issambendaas.WhitlabelHostApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Host;
@@ -556,7 +589,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D0BD89292676525E00B82DC6 /* Build configuration list for PBXProject "Host" */ = {
+		D0BD89292676525E00B82DC6 /* Build configuration list for PBXProject "WhitlabelHostApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0BD89562676525F00B82DC6 /* Debug */,
@@ -565,7 +598,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D0BD89582676525F00B82DC6 /* Build configuration list for PBXNativeTarget "Host" */ = {
+		D0BD89582676525F00B82DC6 /* Build configuration list for PBXNativeTarget "WhitlabelHostApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0BD89592676525F00B82DC6 /* Debug */,
@@ -574,7 +607,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D0BD895B2676525F00B82DC6 /* Build configuration list for PBXNativeTarget "HostTests" */ = {
+		D0BD895B2676525F00B82DC6 /* Build configuration list for PBXNativeTarget "WhitlabelHostAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0BD895C2676525F00B82DC6 /* Debug */,
@@ -583,7 +616,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D0BD895E2676525F00B82DC6 /* Build configuration list for PBXNativeTarget "HostUITests" */ = {
+		D0BD895E2676525F00B82DC6 /* Build configuration list for PBXNativeTarget "WhitlabelHostAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0BD895F2676525F00B82DC6 /* Debug */,

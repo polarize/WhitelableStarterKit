@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Host/Host.xcodeproj">
+      location = "group:WhitlabelHostApp/WhitlabelHostApp.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Shared">

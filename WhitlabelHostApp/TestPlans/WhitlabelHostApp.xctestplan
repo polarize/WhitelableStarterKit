@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "9582B158-D829-46C0-A368-4615C3141FEE",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:WhitlabelHostApp.xcodeproj",
+      "identifier" : "D0BD892D2676525E00B82DC6",
+      "name" : "WhitlabelHostApp"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:WhitlabelHostApp.xcodeproj",
+        "identifier" : "D0BD89432676525F00B82DC6",
+        "name" : "WhitlabelHostAppTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "target" : {
+        "containerPath" : "container:WhitlabelHostApp.xcodeproj",
+        "identifier" : "D0BD894E2676525F00B82DC6",
+        "name" : "WhitlabelHostAppUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

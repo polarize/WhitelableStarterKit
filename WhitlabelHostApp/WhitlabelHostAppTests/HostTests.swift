@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Host
+@testable import WhitlabelHostApp
 
 class HostTests: XCTestCase {
 
