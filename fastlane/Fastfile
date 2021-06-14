@@ -1,0 +1,94 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+#update_fastlane
+
+require 'json'
+
+default_platform :ios
+
+platform :ios do  
+
+  def find_ID(scheme_name)
+    case scheme_name
+    when "WhitlabelHostApp"
+      ENV["APPID"] = "com.issambendaas.WhitlabelHostApp"
+      ENV["USERNAME"] = "issam.bendaas@gmail.com"
+      ENV["WLTEAMID"] = "CQ43F9FCGE"
+      ENV["codesigning_identity"] = "Apple Distribution: Issam Bendaas ("+ENV["WLTEAMID"]+")"
+    end
+  end
+
+  desc "Test The "
+  lane :runtests do
+    scan(
+      workspace: "./WhitelableStarterKit.xcworkspace",
+      scheme: "WhitlabelHostApp",
+      code_coverage: true,
+      xcargs: '-testPlan WhitlabelHostApp')
+  end
+
+  desc "Build and send app to Firebase App Distribution"
+  lane :build do |options|
+    config = options[:config] || 'Debug'
+    app = options[:app] || 'WhitlabelHostApp'
+
+    buildApp(
+      config: config,
+      app: app)
+  end 
+
+  private_lane :buildApp do |options|
+    config = options[:config]
+    app = options[:app]
+    profile = app + "." + config
+    export_method = 'ad-hoc'
+    mobileprovision = "AdHoc"
+    find_ID(app + " " + config)
+
+    update_project_provisioning(
+      xcodeproj: "./WhitlabelHostApp/WhitlabelHostApp.xcodeproj",
+      profile: "../Provision/"+"CQ43F9FCGEcomissambendaasWhitlabelHostApp.mobileprovision",
+      target_filter: app, # matches name or type of a target
+      build_configuration: config,
+      code_signing_identity: ENV['codesigning_identity'] # optionally specify the codesigning identity
+    )
+
+    sign_app_and_upload(
+      app: app,
+      config: config,
+      export_method: export_method,
+      deploy: false
+    )
+  end
+
+  desc 'Sign apps and upload to Firebase/AppStore/AppCenter etc'
+  lane :sign_app_and_upload do |options|
+    app = options[:app]
+    config = options[:config]
+    export_method = options[:export_method]
+    deploy = options[:deploy]
+
+    gym(
+      scheme: app,
+      workspace: "WhitelableStarterKit.xcworkspace",
+      export_method: export_method,
+      configuration: config,#app + "" + config,
+      codesigning_identity: ENV['codesigning_identity'],
+      include_bitcode: false,
+      clean: true,
+      output_name: app + "-" + config,
+      export_xcargs: "-allowProvisioningUpdates"
+    )
+  end
+end
